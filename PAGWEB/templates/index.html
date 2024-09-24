@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Portafolio</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav main-nav">
+        <ul class="main-nav__list main-list">
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#home">INICIO</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#about">QUE ES</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#skills">SERVICIOS</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#idk">¿COMO NOS AFECTA?</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#help">¿COMO AYUDAR?</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <!-- Vista previa -->
+      <section class="main__home home" id="home">
+        <h1 class="home__title">Cambio Climatico</h1>
+        <p class="home__subtitle">¿Quieres ayudar a las personas a concientizarse sobre el cambio climatico?</p>
+        <p class="info-block__text">Aqui te contamos como hacerlo</p>
+      </section>
+      <!-- Acerca de mí -->
+      <section class="main__about about" id="about">
+        <h2 class="about__title">¿Que es el cambio Climatico?</h2>
+        <div class="about__info info-block">
+          <p class="info-block__text">
+            El cambio climático se refiere a los cambios a largo plazo en las temperaturas y
+             patrones climáticos, impulsados principalmente por actividades humanas desde el siglo 
+             XIX, como la quema de combustibles fósiles. Esto genera gases de efecto invernadero que 
+             atrapan el calor en la atmósfera, elevando las temperaturas globales.
+          </p>
+          <img
+            class="info-block__img"
+            src="../static/img/dosmildiesocho.png"
+            alt="me"
+            width="150"
+            height="150"
+          />
+          <img
+            class="info-block__img"
+            src="../static/img/dosmiltreinta.png"
+            alt="me"
+            width="150"
+            height="150"
+          />
+        </div>
+      </section>
+      <!-- COMO AYUDAR -->
+      <section class="main__idk help" id="help">
+        <h1 class="help__title">¿Como puedo ayudar a revertir el cambio climatico?</h1>
+        <h1 class="salud_title">  </h1>
+        <p class="idk__subtitle">
+          Reducir el consumo: Comprar menos, comprar de segunda mano, reparar lo que se pueda y reciclar.
+        </p>
+        <img
+          class="info-block__img"
+          src="../static/img/redu.png"
+          alt="me"
+          width="150"
+          height="150"
+        />
+        <p class="idk__subtitle">
+          Consumir de forma sostenible: Comprar local y de forma sostenible, y no desperdiciar alimentos.
+        </p>
+        <img
+          class="info-block__img"
+          src="../static/img/despe.png"
+          alt="me"
+          width="150"
+          height="150"
+        />
+        <p class="idk__subtitle">
+          Transportar de forma sostenible: Usar el transporte público, la bicicleta, el patinete, o el tren para viajes más largos.
+        </p>
+        <img
+          class="info-block__img"
+          src="../static/img/eco.png"
+          alt="me"
+          width="150"
+          height="150"
+        />
+        <p class="idk__subtitle">
+          Cuidar el agua: Darse una ducha en lugar de un baño, y ahorrar agua
+        </p>
+        <img
+          class="info-block__img"
+          src="../static/img/cuida.png"
+          alt="me"
+          width="150"
+          height="150"
+        />
+      </section>
+      <!-- Sección de competencias -->
+      <section class="main__skills skills" id="skills">
+        <h2 class="skills__title">INFO</h2>
+        <form action="/" method="POST">
+          <ul class="skills__list skills-list">
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/fundacion.png"
+                alt="python"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">FUNDACIONES</span>
+              <input class="skill__button" type="submit" name="button_python" value="VER FUNDACIONES">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/MONEY1.png"
+                alt="discord"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">DONACIONES</span>
+              <input class="skill__button" type="submit" name="button_discord" value="DONAR">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/esr.png"
+                alt="html"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">EMPRESAS RESPONSABLES</span>
+              <input class="skill__button" type="submit" name="button_html" value="VER EMPRESAS">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/reci.png"
+                alt="SQL"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Lugares de Reciclaje</span>
+              <input class="skill__button" type="submit" name="button_db" value="CERCA DE MI">
+            </li>
+          </ul>
+        </form>
+        {% if button_python%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/mundoafectado.jpeg" alt="project" width="500">
+              <a class="project__link" href="">"La mayor amenaza para nuestro planeta es la creencia de que alguien más lo va a salvar"</a>
+          </div>
+        {% endif %}
+      </section>
+      <section class="main__idk idk" id="idk">
+        <h1 class="idk__title">¿Porque el cambio climatico nos afecta?</h1>
+        <h1 class="salud_title">Salud:</h1>
+        <p class="idk__subtitle">
+          Temperaturas altas y bajas pueden afectar la salud de las personas. Por ejemplo, las temperaturas bajas pueden provocar enfermedades virales como el resfrío, mientras que las altas pueden perjudicar a los niños y las personas mayores.
+          </p>
+        <h1 class="agricultura_title">Agricultura:</h1>
+        <p class="idk__subtitle">
+          El cambio climático afecta la capacidad de cultivar alimentos. Por ejemplo, el aumento de las temperaturas y la erosión del suelo reducen la productividad agrícola. 
+          </p>
+        <h1 class="especies_title">Especies:</h1>
+        <p class="idk__subtitle">
+          El cambio climático pone en riesgo la supervivencia de las especies terrestres y oceánicas. Se estima que la extinción de especies es 1000 veces mayor en la actualidad que en cualquier otra época de la historia humana.
+          </p>
+        <h1 class="fenomenos_title">Fenómenos:</h1>
+        <p class="idk__subtitle">
+          El cambio climático agrava fenómenos como la erosión, la desertificación, las inundaciones, los corrimientos de tierras y la salinización
+          </p>
+        <h1 class="seguridad_title">Seguridad:</h1>
+        <p class="idk__subtitle">
+          El cambio climático puede afectar la seguridad de las personas. Por ejemplo, en México se espera que el cambio climático aumente la intensidad de las sequías, lluvias y ciclones tropicales.
+          </p>
+        <h1 class="justicia_title">Justicia Climatica:</h1>
+        <p class="idk__subtitle">
+          Justicia climática
+          Las personas que menos han contribuido al cambio climático son las que se ven afectadas de forma desproporcionada.
+          </p>
+          
+      </section>
+      <!-- Formulario de contacto -->
+      <section class="main__feedback feedback" id="feedback">
+        <h2 class="feedback__title">CONTACTANOS</h2>
+        <form action="" method="POST" class="feedback__form form">
+          <label for="email">
+            <input type="email" class="form__input" name="email" id="email" placeholder="email" required>
+          </label>
+          <label for="text">
+            <textarea name="text" class="form__input" id="text" cols="70" rows="10" required placeholder="COMENTARIOS"></textarea>
+          </label>
+          <button class="form__button" type="submit">SEND</button>
+        </form>
+      </section>
+    </main>
+    <!-- Pie de página con enlaces a redes sociales -->
+    <footer>
+
+    </footer>
+  </body>
+</html>
